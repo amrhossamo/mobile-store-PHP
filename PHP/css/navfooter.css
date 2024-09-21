@@ -1,0 +1,356 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*NAAAAAAAV*/
+
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px;
+    z-index: 10000;
+}
+header.sticky
+{
+    padding: 20px 100px;
+    background: #fff;
+}
+header.sticky .toggle-btn .bar
+{
+    background: #201e21;
+}
+header.sticky .nav-menu 
+{
+    margin: 30px 0;
+}
+header.sticky .nav-menu ul
+{
+    background: #fff;
+    color: #201e21;
+}
+header.sticky ul li a , header.sticky .logo
+{
+    color: #201e21 ;
+}
+header .logo
+{
+    position: relative;
+    font-size: 700;
+    color: #fff ; 
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-weight: 900;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li 
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    text-decoration: none;
+    position: relative;
+    margin: 0 5px;
+    color:#fff;
+    font-weight: 500;
+    padding: 10px;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+.signin , .signup
+{
+    border: 1px solid #fff;
+}
+.signup
+{
+    background: #e0aa6e;
+    border: none;
+}
+header ul li a:hover
+{
+    background: #e0aa6e;
+    transition: 0.5s ease;
+}
+.signup:hover
+{
+    background: transparent;
+    border: solid 0.5px #fff;
+}
+header nav
+{
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 100px;
+    height: 100%;
+} 
+
+.toggle-btn
+{
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 22px;
+    width: 32px;
+    cursor: pointer;
+}
+.toggle-btn .bar
+{
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+} 
+
+/*-------------------------------------------------------*/
+
+@media screen and (max-width:1014px)
+{
+
+    .toggle-btn
+    {
+        display: flex;
+    }
+    header nav
+    {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+    header nav .logo
+    {
+        position: absolute;
+        left: 100px;
+        top: 10px;
+    }
+    .nav-menu 
+    {
+        display: none;
+        width: 100vw;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .nav-menu ul 
+    {
+        width: 100%;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        padding-right: 0px;
+    }
+    .nav-menu ul li 
+    {
+        padding-left: 30px;
+        margin: 20px;
+    }
+    .nav-menu ul li a
+    {
+        text-transform: uppercase;
+    }
+    .nav-menu.active
+    {
+        display:block;
+        z-index: 100;
+    }
+}
+
+/*----------------------------------------------------*/
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px ;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .footer-container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .footer-container .sec
+{
+    margin-right: 30px;
+}
+footer .footer-container .aboutus.sec
+{
+    width: 40%;
+}
+.footer-container  h2
+{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.footer-container h2::before
+{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #e0aa6e;
+}
+.aboutus.sec p
+{
+    color: #999;
+}
+.footer-container .sm
+{
+    margin-top: 20px;
+    display: flex;
+}
+.footer-container .sm li
+{
+    list-style: none;
+}
+.footer-container .sm li a
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+.footer-container .sm li a:hover
+{
+    background: #fff;
+    color: #fff;
+    transition: 0.5s ease;
+}
+.footer-container .sm li a img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.quicklinks
+{
+    width: 25%;
+    position: relative;
+}
+
+.quicklinks ul li
+{
+    list-style: none;
+}
+.quicklinks ul li a
+{
+    text-decoration: none;
+    color: #999;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.quicklinks ul li a:hover
+{
+    color: #fff;
+}
+.contactfooter
+{
+    width: calc(35%-60px);
+    margin-right: 0 !important;
+}
+.footerinfo
+{
+    position: relative;
+}
+.footerinfo li
+{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contactfooter .footerinfo li span:nth-child(1)
+{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contactfooter .footerinfo li span
+{
+    color: #999;
+}
+.contactfooter .footerinfo li a
+{
+    color: #999;
+    text-decoration: none;
+}
+.contactfooter .footerinfo li a:hover
+{
+    color :#fff;
+}
+.copyrights
+{
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+
+/* ______________________________________*/
+
+
+@media screen and (max-width:991px)
+{
+    
+    footer
+    {
+        padding: 40px;
+    }
+    footer .footer-container
+    {
+        flex-direction: column;
+    }
+    footer .footer-container .sec
+    {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .aboutus.sec , .quicklinks ,.contactfooter
+    {
+        width: 100% !important;
+    }
+    .copyrights
+    {
+        padding: 8px 40px;
+        text-align: center;
+        color: #999;
+    }
+}

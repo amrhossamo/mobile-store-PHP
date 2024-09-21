@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #e0aa6e;
+    --secondary-color: #ffcf98;
+    --gray-color: #808080;
+}
+.trips-heading {
+    background-color: var(--primary-color);
+    padding: 50px 0;
+    margin-bottom: 10px;
+}
+
+.trips-heading h1 {
+    margin: auto;
+    width: fit-content;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 60px;
+}
+
+@media (max-width: 768px) {
+    .trips-heading h1 {
+        font-size: 21px;
+    }
+}
+
+.trips-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(100%, auto));
+    gap: 10px;
+} 
+
+@media (max-width: 768px) {
+    .trips-container {
+        width: 100%;
+    }
+}
+
+.trip-box {
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+    position: relative;
+    height: 500px;
+    width: 200%;
+}
+
+.trip-box img {
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: 0.5 ease;
+}
+
+.trip-box img:hover {
+    cursor: pointer;
+    opacity: 0.95;
+    transition: 0.5s ease;
+}
+
+.trip-box h2 {
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.trip-dark-layer
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trip-box p {
+    font-size: 30px;
+    line-height: 1.35;
+    color: var(--gray-color);
+}
+
+.trip-box .options a {
+    color: white;
+    background-color: var(--primary-color);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid var(--gray-color);
+    margin: 20px;
+}
+
+.trip-box .options a:hover {
+    background-color: var(--secondary-color);
+}
